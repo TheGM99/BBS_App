@@ -1,0 +1,45 @@
+﻿<Window x:Class="BBS_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BBS_App"
+        mc:Ignorable="d"
+        Title="BlumBlumShub" Height="450" Width="800" SizeToContent="Manual" ResizeMode="CanMinimize">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="250*"/>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="Series_Border" BorderThickness="2,2,2,2" BorderBrush="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Margin="10,209,10,10" CornerRadius="2,2,2,2" Grid.ColumnSpan="3">
+            <ScrollViewer>
+                <TextBlock x:Name="Series_Display" TextWrapping="Wrap" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+            </ScrollViewer>
+        </Border>
+        <Border x:Name="Tests_Border" BorderThickness="2,2,2,2" BorderBrush="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Margin="36,10,10,230" CornerRadius="2,2,2,2" Grid.Column="2">
+            <Label x:Name="TESTS" Content="TESTS RESULTS" HorizontalAlignment="Left" Height="27" Margin="-326,26,0,0" VerticalAlignment="Top" Width="100" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+        </Border>
+        <Button x:Name="Generate_Button" Content="Generate" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="290" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <Label x:Name="SingularBit" Content="SingularBit:" HorizontalAlignment="Left" Margin="15,68,0,0" VerticalAlignment="Top" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"/>
+        <Label x:Name="Series" Content="Series:" HorizontalAlignment="Left" Margin="15,94,0,0" VerticalAlignment="Top" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+        <Label x:Name="LongSeries_result" Content="LongSeries:" HorizontalAlignment="Left" Margin="15,120,0,0" VerticalAlignment="Top" Cursor="None" Foreground="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
+        <Label Content="Poker:" HorizontalAlignment="Left" Margin="15,146,0,0" VerticalAlignment="Top" Foreground="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
+        <Border BorderThickness="2,2,2,2" BorderBrush="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Margin="207,20,23,246" CornerRadius="2,2,2,2" Grid.Column="2"/>
+        <TextBlock x:Name="Poker_X" HorizontalAlignment="Left" Height="18" Margin="53,162,0,0" Text="2.16 &lt; X &lt; 46.17" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Grid.Column="2"/>
+        <TextBlock x:Name="LongSeries_count" HorizontalAlignment="Left" Height="18" Margin="53,112,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Grid.Column="2"/>
+        <TextBlock x:Name="Series_Count" HorizontalAlignment="Left" Height="127" Margin="219,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Grid.Column="2"/>
+        <TextBlock x:Name="Singular_Count" HorizontalAlignment="Left" Margin="53,71,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="132" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" RenderTransformOrigin="0.414,0.541" Grid.Column="2"/>
+        <TextBlock x:Name="SingularBit_result" HorizontalAlignment="Left" Height="19" Margin="90,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="Series_Result" HorizontalAlignment="Left" Height="17" Margin="64,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="Longseries_result" HorizontalAlignment="Left" Height="20" Margin="90,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Foreground="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="Poker_result" HorizontalAlignment="Left" Height="20" Margin="64,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Foreground="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
+        <Label x:Name="SingularBit_count_title" Content="SingularBit:" HorizontalAlignment="Left" Margin="48,46,0,0" VerticalAlignment="Top" Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Grid.Column="2"/>
+        <Label x:Name="Series_count_title" Content="Series:" HorizontalAlignment="Left" Margin="219,25,0,0" VerticalAlignment="Top" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Grid.Column="2"/>
+        <Label x:Name="LongSeries_count_title" Content="LongSeries:" HorizontalAlignment="Left" Margin="48,87,0,0" VerticalAlignment="Top" Cursor="None" Foreground="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" Grid.Column="2"/>
+        <Label x:Name="Poker_count_title" Content="Poker:" HorizontalAlignment="Left" Margin="48,130,0,0" VerticalAlignment="Top" Foreground="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" Grid.Column="2"/>
+        <Label Content="SEQUENCE" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="27" Margin="21,186,0,0" VerticalAlignment="Top" Width="169" Foreground="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}"/>
+        <Label Content="TESTS VALUES" Grid.Column="2" HorizontalAlignment="Left" Margin="48,20,0,0" VerticalAlignment="Top" Foreground="{DynamicResource {x:Static SystemColors.MenuBrushKey}}"/>
+
+    </Grid>
+</Window>
